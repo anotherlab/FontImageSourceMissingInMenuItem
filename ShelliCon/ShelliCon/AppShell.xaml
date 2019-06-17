@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+       xmlns:icons="clr-namespace:ShelliCon.Images"
+       xmlns:local="clr-namespace:ShelliCon.Views"
+       FlyoutBehavior="Flyout"
+       Title="ShelliCon"
+       x:Class="ShelliCon.AppShell">
+
+
+    <!-- Your Pages -->
+    <ShellItem>
+        <ShellSection Title="Browse" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        </ShellSection>
+        <ShellSection Title="About" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+        </ShellSection>
+    </ShellItem>
+    <FlyoutItem Title="Icon Shows up">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{DynamicResource MaterialFontFamily}"
+                Glyph="{x:Static icons:MaterialDesignIconFont.InformationOutline}"
+                Color="Black"/>
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    
+    <MenuItem Text="Icon Missing">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{DynamicResource MaterialFontFamily}"
+                Glyph="{x:Static icons:MaterialDesignIconFont.InformationOutline}"
+                Color="Black"/>
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+
+</Shell>
