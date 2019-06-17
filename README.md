@@ -31,6 +31,7 @@ This XAML will not draw an icon
 ```    
 
 A screenshot from the app in this repository
+
 ![](https://github.com/anotherlab/fontimagesourcemissinginmenuitem/blob/master/screenshots/menuitem%201.png?raw=true)
 
 
